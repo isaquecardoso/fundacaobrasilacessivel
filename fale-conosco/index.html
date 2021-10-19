@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale conosco - Fundação Brasil Acessível</title>
+    <link rel="shortcut icon" href="../assets/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="nav-width">
+            <div class="img-logo">
+                <a href="../">
+                    <img src="../assets/img/logotype.png" alt="Logotipo da Fundação Brasil Acessível" style="width: 185px; height: 47px;">
+                </a>
+            </div>
+            <div class="search-dv">
+                <input type="search" name="search" id="search-input" placeholder="Digite aqui para pesquisar">
+                <button type="submit" class="search-btn"><i class="fal fa-search"></i></button>
+            </div>
+        </div> 
+    </header>
+    <nav class="dp-menu">
+        <ul class="dropdown-ul">
+            <li><a>As deficiências <i class="fal fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="../deficiencias/deficiencia-visual/">Deficiência visual</a></li>
+                    <li><a href="../deficiencias/deficiencia-auditiva/">Deficiência auditiva</a></li>
+                    <li><a href="../deficiencias/deficiencia-intelectual/">Deficiência intelectual</a></li>
+                    <li><a href="../deficiencias/deficiencia-fisica/">Deficiência física</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Fale conosco</a></li>
+            <li><a href="../doe-aqui/">Doe aqui</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <h1 class="title">Entre em contato conosco</h1>
+            <p class="subtitle">Preencha o formulário a seguir</p>
+        </div>
+            <form class="row" action="obrigado.html">
+                <div class="col">
+                    <input type="text" placeholder="Nome" name="frist-name" class="form-control" required>
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="Sobrenome" name="last-name"  class="form-control" required>
+                </div>
+                <div class="col-12">
+                    <input placeholder="Telefone" type="text" name="name" class="form-control one-line" required>
+                </div>
+                <div class="col-12">
+                    <input placeholder="E-mail" type="email" name="email" class="form-control one-line" required>
+                </div>
+                <div class="col-12  one-line">
+                    <label>Tipo de contato?</label>
+                    <select name="contact" class="options-select" required>
+                        <option selected disabled>Selecione uma das opções</option>
+                        <option value="doubts">Dúvidas</option>
+                        <option value="suggestion">Sugestão</option>
+                        <option value="compliments">Elogios</option>
+                        <option value="complaint">Reclamação</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <textarea name="message" class="form-control one-line" row="50" required></textarea>
+                </div>
+                <button type="submit" class="btn button_primary">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer-pg">
+        <main>
+            <div class="copyrigth">
+                <p class="text-copyrigth">
+                    &copy; 2021 Copyright — Fundação Brasil Acessível
+                </p>
+            </div>
+        </main>
+    </footer>
+</body>
+</html>

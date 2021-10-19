@@ -1,0 +1,375 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --bgColorNav: rgb(24, 61, 83);
+    --colorHover: rgb(24, 139, 255);
+    --colorPrimary: rgb(241, 253, 255);
+    --colorMenu: rgb(204, 204, 204);
+    --color-btn: rgb(0, 69, 151);
+    --color-btn-hover: rgb(72, 114, 165);
+    --border-color-input: rgb(0, 120, 190);
+    --text-title: rgb(83, 142, 215);
+    --colorBtnCarousel: rgba(46, 46, 46, .2);
+    --colorAbout: rgb(17, 103, 52);
+    --color-scrollbar: rgba(0, 0, 0, 0.582);
+    --color-scrollbar-hover: rgba(0, 68, 151, 0.432);
+    --color-bg-card-img: rgb(134, 142, 150);
+    --color-bg-card: #ffffff;
+}
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-scrollbar);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-scrollbar-hover);
+}
+main{
+    width: 1200px;
+}
+.title{
+    color: var(--text-title);
+    font-size: 45px;
+    margin-top: 25px;
+}
+.subtitle{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.title,.subtitle{
+    text-align: center;
+}
+
+/* header */
+.app-header{
+    background-image: linear-gradient(90deg, rgb(0, 69, 151), rgb(0, 120, 190), rgb(83, 142, 215));
+    height: 70px;
+}
+.nav-width{
+    max-width: 1200px;
+}
+.img-logo {
+    width: 185px;
+    margin-left: 10px;
+    padding-top: 11px;
+}
+#search-input{
+    width: 360px;
+    padding: 9px;
+}
+#search-input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 1px 1px 17px 0rem rgb(5 81 134);
+}
+.search-dv {
+    display: flex;
+    margin-top: -47px;
+    margin-left: 845px;
+}
+button.search-btn {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+button.search-btn:hover {
+    background-color: var(--color-btn);
+}
+
+/* menu nav */
+.dp-menu{
+    background-color: var(--bgColorNav);
+}
+.dp-menu ul{
+    max-width: 1200px;
+    list-style: none;
+    padding: 0;
+    background-color: var(--bgColorNav);
+}
+.dp-menu ul li {
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.dp-menu ul li a {
+    color: var(--colorPrimary);
+    text-decoration: none;
+    display: inline-block;
+    transition: background .3s;
+    padding: 15px;
+}
+.dp-menu ul li a:hover{
+    background-color: var(--colorHover);
+}
+/* sub menu */
+.dp-menu ul ul {
+    border-width: 5px;
+    border-top-style: solid;
+    border-color: var(--colorMenu);
+    width: 230px;
+    display: none;
+    left: 0;
+    position: absolute;
+}
+.dp-menu ul li:hover ul {
+    display: block;
+}
+.dp-menu ul ul li a {
+    display: block;
+}
+
+/* slider */
+.carousel-slider{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.carousel-slider .carousel_item,
+.carousel-slider .carousel_hidden{
+    display: none;
+}
+.carousel-slider .carousel_item img{
+    width: 100%;
+    height: auto;
+}
+.carousel-slider .carousel_active{
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+.icon-carousel {
+    font-size: 40px;
+    color: var(--colorPrimary);
+}
+.carousel-slider .carousel_actions{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+}
+.carousel-slider .carousel_actions button {
+    border: 0;
+    cursor: pointer;
+    width: 10%;
+    height: 304px;
+    background: transparent;
+}
+.carousel-slider .carousel_actions button:hover {
+    background-color: var(--colorBtnCarousel);
+}
+.carousel-slider .carousel_actions button#carousel-prev{
+    margin-left: 0;
+}
+.carousel-slider .carousel_actions button#carousel-next{
+    margin-right: 0;
+}
+/* keyframe */
+@keyframes fadeVisibility{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+/* about website */
+.m3-info {
+    display: flex;
+    margin-top: 55px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.about-site {
+    background-color: var(--colorAbout);
+    width: 400px;
+    height: 150px;
+    padding: 15px;
+    align-items: center;
+    border-radius: 1rem;
+}
+.about-site p {
+    color: var(--colorPrimary);
+    text-align: center;
+    top: 50%;
+    transform: translateY(50%);
+}
+.mission_card {
+    width: 400px;
+    height: 150px;
+    background-color: var(--colorMenu);
+    border-radius: 1rem;
+    padding-left: 25px;
+}
+.mission_card_paragraph {
+    top: 50%;
+    transform: translateY(15%);
+}
+span.text_bold {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+/* sobre as deficiências */
+section.deficient {
+    display: flex;
+    margin-top: 45px;
+    margin-bottom: 55px;
+}
+.card {
+    width: 18rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: var(--color-bg-card);
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.cover-card{
+    width: 286px;
+    background-color: var(--color-bg-card-img);
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.body-card {
+    flex: 1 1 auto;
+    padding: 15px;
+}
+.card-title {
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+.card-text {
+    text-align: justify;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.see_more {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-more {
+    width: 500px;
+    padding: 15px;
+}
+.button_primary{
+    color: var(--color-bg-card);
+    background-color: var(--color-btn);
+    border-color: var(--color-btn);
+}
+.button_primary:hover{
+    background-color: var(--color-btn-hover);
+    border-color: var(--color-btn-hover);
+}
+/* formulario */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-bottom: 25px;
+}
+.form-control:focus {
+    border-color: var(--border-color-input);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+.col{
+    flex: 1 0 0%;
+}
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+    margin-bottom: 65px;
+}
+select.options-select{
+    margin-bottom: 25px;
+}
+/* as deficiencias */
+h1{
+    margin-top: 25px;
+}
+h1, h2, h3, p {
+    margin-bottom: 25px;
+}
+p{
+    text-align: justify;
+}
+ul.m3-list {
+    margin-left: 65px;
+    margin-bottom: 25px;
+}
+/* footer */
+.footer-pg{
+    background-image: linear-gradient(90deg, rgb(0, 69, 151), rgb(0, 120, 190), rgb(83, 142, 215));
+    height: 72px;
+}
+.copyrigth {
+    top: 50%;
+    transform: translateY(100%);
+}
+.text-copyrigth{
+    color: var(--colorPrimary);
+    text-align: center;
+}
